@@ -41,7 +41,7 @@ app.post("/login", login); // User login route
 
 //using get and find to fetch data from mongodb compass database
 app.get("/products" ,async(req, res)=>{
-  console.log("data fetched from the users");
+  console.log("products data fetched");
   const products= await product.find()//using find method to retrieve data
   res.status(200).send(products);
 })
