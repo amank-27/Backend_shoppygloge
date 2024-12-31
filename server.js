@@ -122,7 +122,7 @@ app.put("/cart/:id",verifyToken, async(req, res)=>{
    }
 })
 //using delete , findById and deleteOne to fetch specific product in the cart to delete
-app.delete("/cart/:id", async(req, res)=>{
+app.delete("/cart/:id", verifyToken, async(req, res)=>{
     try {
     const productId= req.params.id;
     console.log(`deleting product with id:${productId}`);
